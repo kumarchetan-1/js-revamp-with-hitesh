@@ -51,3 +51,4 @@ console.log(yourName.toUpperCase()); // Converts the string to uppercase.
 console.log(yourName.trim()); // Removes leading and trailing whitespace.
 console.log(yourName.trimEnd()); // Removes trailing whitespace.
 console.log(yourName.trimStart()); // Removes leading whitespace.
+
