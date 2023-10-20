@@ -1,5 +1,10 @@
 const yourName = new String("Gautam Buddha");
 
+const fName = "Chetan"
+const email = "kumarchetan.npr@gmail.com"
+
+console.log(`My First Name is ${fName} and email address is ${email}`)
+
 console.log(yourName.anchor("https://www.chetankumar.me")); // Creates an anchor tag around the string.
 console.log(yourName.big()); // Wraps the string in a <big> tag.
 console.log(yourName.blink()); // Displays the string blinking.
