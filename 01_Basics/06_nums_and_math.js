@@ -33,6 +33,10 @@ console.log(Math.max(45, 3, 5, 0, -9));
 */
 
 console.log(Math.random()) // returns a random floating-point number in the range [0,1) — that is, between 0 (inclusive) and 1 (exclusive).
-const a = 6;
-const b = 1;
+const min = 6;
+const max = 1;
+
+// Simple way if you know min and max values
+console.log(Math.floor(Math.random()*(max-min+1)+min));
+// If you don't know the min and max values
 console.log(Math.floor(Math.random()*Math.abs(a-b+1)+Math.min(a,b)))
