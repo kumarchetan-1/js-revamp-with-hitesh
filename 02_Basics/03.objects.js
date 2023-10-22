@@ -37,7 +37,21 @@ console.log(appUser.name);
 console.log(appUser["name"]); // Preferred way because if the keys in the object are declared in double quotes then you will not get value using dot notation
 console.log(typeof appUser[mySymbol]);
 
+appUser.email = "kumarchetan.npr@google.com"
+// Object.freeze(appUser) // This restricts the object to change it properties
+appUser.email = "kumarchetan.npr@facebook.com"
+console.log(appUser["email"])
 
+appUser.greetings = function(){
+  console.log("Ram Ram Ji Sareiyaanee!")
+}
+appUser.greetings2 = function(){
+  console.log(`Ram Ram ${this.name} Ji!`)
+}
+
+console.log(appUser["greetings"]); // Returns => [Function (anonymous)]
+appUser.greetings(); // Now function runs
+appUser.greetings2();
 
 
 // Getting Only symbols and all key value pairs as direct for loop will not work for symbols on Object
@@ -55,3 +69,4 @@ const object = {
     console.log(symbol, object[symbol]);
   }
 */
+
