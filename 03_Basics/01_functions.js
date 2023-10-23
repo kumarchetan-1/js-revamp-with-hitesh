@@ -7,6 +7,7 @@ function printMyName(){
     console.log("A");
     console.log("N");
 }
+
 // printMyName => without parenthesis function holds its reference
 // printMyName() // Function call with parenthesis
 
