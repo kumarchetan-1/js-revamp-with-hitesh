@@ -66,4 +66,32 @@ console.log(tinderUser);
 console.log(Object.keys(tinderUser)); // returns an array of keys only
 console.log(Object.values(tinderUser)); // returns an array of values only
 console.log(Object.entries(tinderUser)); // returns an array of arrays of key and values both
-console.log(tinderUser.hasOwnlProperty("isLoggedIn")); // returns true and false values
+console.log(tinderUser.hasOwnProperty("isLoggedIn")); // returns true and false values
+
+const course = {
+    name: "Love For Javascript",
+    price: 999,
+    courseInstructor: "Chetan Kumar"
+}
+
+// course.instructor
+
+// const {courseInstructor} = course // another syntax to get rid of course.courseInstructor for finding the value of a key
+// OR
+
+const {courseInstructor: instructor} = course // destructuring
+
+console.log(instructor); // returns Chetan Kumar
+
+// JSON Talk
+// {
+//     "name": "Chetan",
+//     "courseName": "Javascript King",
+//     "price": free
+// }
+
+// [
+//     {},
+//     {},
+//     {}
+// ]
