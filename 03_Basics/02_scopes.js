@@ -42,14 +42,15 @@ if (true) {
 }
 // console.log(userName)
 
-console.log(incrementOne(5)); // returns 6
+console.log(incrementOne(5)); // returns 6 and runs due to hoisting => Function declarations are hoisted, and you can use them before the declaration in your code.
 
-function incrementOne(num) {
+
+function incrementOne(num) { // Function Declaration:
     return num + 1
 }
 
-console.log(incrementTwo(9)); // Error => Cannot access 'incrementTwo' before initialization
+console.log(incrementTwo(9)); // Error => Cannot access 'incrementTwo' before initialization Function expressions are also hoisted but only the variable declaration, not the function definition. This is why you can't access the function before it's assigned a value.
 
-const incrementTwo = function(num){
+const incrementTwo = function(num){ // Function Expression:
     return num + 2;
 }
