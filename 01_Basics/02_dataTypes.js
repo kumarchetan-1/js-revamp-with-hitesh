@@ -22,9 +22,9 @@ console.log(3
    // boolean - true or false
    // null - standalone value (object type) if we will check the data-type of null then will get (typeof()) 'object'
    // undefined - undefined data type
-   // Used in react - Used in react, figma tools,
+   // Symbol - Used in react - Used in react, figma tools,
 
 
    // object 
 
-   console.log(typeof null);
+   console.log(typeof null); // Gives object as output
