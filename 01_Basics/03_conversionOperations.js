@@ -13,11 +13,12 @@ let score7 = "Chetan"
 let valueInNumber = Number(score7); 
 
 // console.log(typeof(valueInNumber)) // returns number type
-// console.log(valueInNumber) // returns NaN - Not a number
+// console.log(valueInNumber) // returns NaN - Not a number (Nan also comes in number data type)
 
 /* "33" => 33
    "33abc" => NaN
-   true => 1, false => 0
+   true => 1, false => 0,
+   Null => 0
 
    */
 
@@ -48,7 +49,7 @@ let valueInNumber = Number(score7);
       console.log(2+2)
         console.log(2-2)
         console.log(2*2)
-        console.log(3**2)
+        console.log(3**2) // Three raise to power 2
         console.log(7/2)
         console.log(9%2)
       */
@@ -73,17 +74,16 @@ let valueInNumber = Number(score7);
         // console.log(true+) // Throw error
 
         let num1, num2, num3
-        num1 = num2 = num3 = 3 + 3
+        num1 = num2 = num3 = 3 + 3 // Not recommended
 
 
-        let gameCounter1 = 100
-        let gameCounter2 = 100
-        const topCount = gameCounter1++ // first returns the value then increment
-        const botCount = ++gameCounter2 // first increment the value then returns
+        let gameCounter = 100
+        const postfixIncrement = gameCounter++ // first returns the value then increment
+        const prefixIncrement = ++gameCounter // first increment the value then returns
         
 
-        console.log(topCount)
-        console.log(botCount)
+        console.log(postfixIncrement)
+        console.log(prefixIncrement)
 
 //         If used postfix, with operator after operand (for example, x++), the increment operator increments and returns the value before incrementing.
 
