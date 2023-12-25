@@ -12,10 +12,11 @@ let userEmail;
 const id = Symbol('123')
 const anotherId = Symbol('123')
 
-console.log(id === anotherId);
+// console.log(id === anotherId);
 
-// const bigNumber = 3456543576654356754n
+const bigNumber = 3456543576654356754n
 
+console.log(typeof bigNumber);
 
 
 // Reference (Non primitive)
