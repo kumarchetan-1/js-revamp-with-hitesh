@@ -33,10 +33,10 @@ console.log(yourName.padStart(20, "Y")); // Pads the string with "Y" at the begi
 console.log(yourName.repeat(2)); // Repeats the string 2 times.
 console.log(yourName.replace("Buddha", "Buddha the Enlightened")); // Replaces "Buddha" with "Buddha the Enlightened".
 console.log(yourName.replaceAll("a", "A")); // Replaces all occurrences of "a" with "A".
-console.log(yourName.search("am")); // Searches for "am" in the string.
-console.log(yourName.slice(2, 7)); // Returns a substring from index 2 to 7, you can also use negative values then it will start from the end
+console.log("search am " + yourName.search("am")); // Searches for "am" in the string.
+console.log("slice(2, 7): " + yourName.slice(2, 7)); // Returns a substring from index 2 to 7, you can also use negative values then it will start from the end
 console.log(yourName.small()); // Wraps the string in <small> tags.
-console.log(yourName.split(" ")); // Splits the string into an array based on spaces.
+console.log("Splits based on space" + yourName.split(" ")); // Splits the string into an array based on spaces.
 console.log(yourName.startsWith("Gautam")); // Checks if the string starts with "Gautam".
 console.log(yourName.strike()); // Wraps the string in <strike> tags.
 console.log(yourName.sub()); // Wraps the string in <sub> tags.
