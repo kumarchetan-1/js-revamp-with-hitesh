@@ -3,7 +3,7 @@
 // alert(3+3) // we are using Node.js not browser
 
 console.log(3
-    +3) // Code readablity should be on top priority
+    +3) // Code readability should be on top priority
 
     /* 
    Important Javascript Documentation 
