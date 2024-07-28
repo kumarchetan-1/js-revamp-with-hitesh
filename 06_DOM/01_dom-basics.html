@@ -3,22 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <title>DOM</title>
+    <style>
+        .dg-black{
+            background-color: #212121;
+            color: white;
+        }
+    </style>
 </head>
-<body>
-    <div class="dg-blac">
-        <h1 id="title" class="heading">Learning JS with Hitesh</h1>
+<body class="dg-black">
+    <div>
+        <h1 id="title" class="heading">Learning JS with Hitesh 
+            <span style="display: none;">Test text</span>
+        </h1>
+        <h2>Lorem ipsum dolor sit amet consectetur.</h2>
+        <h2>Lorem ipsum dolor sit amet consectetur.</h2>
+        <h2>Lorem ipsum dolor sit amet consectetur.</h2>
         <p>Lorem ipsum dolor sit amet.</p>
+        <ul>
+            <li class="list-item">First List item </li>
+            <li class="list-item">Second List item </li>
+            <li class="list-item">Third List item </li>
+            <li class="list-item">Fourth List item</li>
+        </ul>
     </div>
 </body>
 <script>
-    console.log(window)
-    console.log(window.document)
-    console.log(document)
-    console.dir(document) // To get complete overview
+    // console.log(window)
+    // console.log(window.document)
+    // console.log(document)
+    // console.dir(document) // To get complete overview
 
-    console.log(document.links)
-    console.log(document.baseURI)
-    console.log(document.baseURI[0]) // select first link
-    document.getElementById("title").innerHTML = "<h1> Chai or Code </h1>"
+    // console.log(document.links)
+    // console.log(document.baseURI)
+    // console.log(document.baseURI[0]) // select first link
+    // document.getElementById("title").innerHTML = "<h1> Chai or Code </h1>"
+
+    // console.log(document.getElementById("title").id)
+    // console.log(document.getElementById("title").className)
+    // console.log(document.getElementById("title").getAttribute("class"))
+    // console.log(document.getElementById("title").setAttribute("class", "main-heading heading"))
+
+    // let heading = document.getElementById("title")
+    // heading.style = "background-color: green; padding: 10px; border-radius: 10px;" 
+    // // Style shorthand property
+    // heading.style.backgroundColor = "red"
+    // heading.style.padding = "10px"
+    // heading.style.borderRadius = "10px"
+
+    // console.log(`Text content: ${heading.textContent}`) // returns hidden elements as well
+    // console.log(`Inner HTML: ${heading.innerHTML}`)
+    // console.log(`Inner text: ${heading.innerText}`)
+
+    // let tagSelectedElem = document.querySelector("h1")
+    // let idSelectedElem = document.querySelector("#title")
+    // let classSelectedElem = document.querySelector(".heading")
+    // let firstPara = document.querySelector("p:first-child")
+
+    // console.log(tagSelectedElem)
+    // console.log(idSelectedElem)
+    // console.log(classSelectedElem)
+
+    let myLists = document.querySelectorAll("li") // Returns node list similar to array but it is not an array
+
+    // ++++++ Node List ++++
+    // A NodeList is a collection of nodes, typically DOM elements, that can be returned by methods like document.querySelectorAll() or Node.childNodes.
+    // Unlike arrays, NodeList does not have methods like map(), filter(), or reduce(), but it does have a forEach() method for iteration in most modern browsers.
+
+    // ++++++ HTML Collection ++++
+    // An HTMLCollection is a collection of HTML elements, typically returned by methods like document.getElementsByTagName() or document.getElementsByClassName().
+    // Lacks array-like methods (map(), filter(), reduce(), etc.) and even the forEach() method.
+
+    // myLists.forEach((list)=> list.style.color = "green")
+    // myLists[0].style.color = "purple"
+
+
+   let allList = document.getElementsByClassName("list-item") // It returns HTML collection hence forEach method is not applicable on it.
+
+//    allList.forEach((li)=> li.style.color = "yellow") // It is not going to work for this to work we need to convert it into an Array
+
+   let listArr = Array.from(allList)
+   console.log(listArr)
+
+   listArr.forEach((li)=> (li.style.color = "yellow")) 
+
 </script>
 </html>
