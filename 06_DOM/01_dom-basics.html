@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM</title>
+</head>
+<body>
+    <div class="dg-blac">
+        <h1 id="title" class="heading">Learning JS with Hitesh</h1>
+        <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+</body>
+<script>
+    console.log(window)
+    console.log(window.document)
+    console.log(document)
+    console.dir(document) // To get complete overview
+
+    console.log(document.links)
+    console.log(document.baseURI)
+    console.log(document.baseURI[0]) // select first link
+    document.getElementById("title").innerHTML = "<h1> Chai or Code </h1>"
+</script>
+</html>
