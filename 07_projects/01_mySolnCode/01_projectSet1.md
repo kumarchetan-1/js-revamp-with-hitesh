@@ -78,7 +78,7 @@ setInterval(clock, 1000);
 
 ```
 
-##  Project 3 Guess the number
+##  Project 4 Guess the number
 
 ```javascript
 const userInput = document.querySelector('#guessField')
