@@ -165,3 +165,56 @@ function startGame() {
 }
 
 ```
+
+## Project 5 Keyboard Keys
+
+``` Javascript
+
+document.querySelector("body").addEventListener("keypress", (e)=>{
+  document.querySelector('#insert').innerHTML = `
+  <table class="color">
+  <tr>
+    <th>Key Name</th>
+    <th>Key Code</th>
+    <th>Code</th>
+  </tr>
+  <tr>
+    <td>${e.key == " "? "space": e.key}</td>
+    <td>${e.keyCode}</td>
+    <td>${e.code}</td>
+  </tr>
+</table
+  `
+})
+```
+
+## Project 6 Unlimited Color generator
+
+``` javascript
+
+function randomColor(){
+  const colorCodes = "0123456789abcdef"
+  let hexCode = "#"
+  for(let i=0; i<6; i++){
+    let randomNum = Math.floor(Math.random()*16)
+    hexCode += colorCodes[randomNum]
+  }
+  return hexCode
+}
+
+function changeBgColor(){
+  document.querySelector("body").style.backgroundColor = randomColor()
+}
+
+let backgroundChanger 
+document.querySelector("#start").addEventListener("click", ()=>{
+  if(!backgroundChanger){
+    backgroundChanger = setInterval(changeBgColor, 1000)
+  }
+})
+
+document.querySelector("#stop").addEventListener("click", ()=>{
+  clearInterval(backgroundChanger) 
+  backgroundChanger = null
+})
+```
