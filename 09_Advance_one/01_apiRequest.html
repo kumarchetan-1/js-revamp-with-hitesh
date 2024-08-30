@@ -35,29 +35,45 @@ border-radius: 9px 9px 0 0;
 </div>
 
 <script>
+	// const requestUrl = "https://api.github.com/users/kumarchetan-1"
+	// const method = "GET"
+	// const xhr = new XMLHttpRequest()
+
+	// xhr.open(method, requestUrl)
+
+	// let userImgURL, githubFollowers
+	// xhr.onreadystatechange = function(){
+	// 	console.log(xhr.readyState)
+	// 	if(xhr.readyState == 4){
+	// 		const data = JSON.parse(this.responseText)
+	// 		githubFollowers = data.followers
+	// 		userImgURL = data.avatar_url
+	// 		console.log(githubFollowers)
+	// 		if(userImgURL){
+	// 			let userImg = document.createElement("img")
+	// 			userImg.setAttribute("src", userImgURL)
+	// 			document.querySelector(".user-img").append(userImg) 
+	// 		} if(githubFollowers === 0 || githubFollowers ){
+	// 			let followers = `<h3> Followers: ${githubFollowers} </h3>`
+	// 			let followerConta = document.querySelector(".followers")
+	// 			followerConta.innerHTML = followers;
+	// 		}
+	// 	}
+	// }
+	// xhr.send()
+
+
+	// Practice
 	const requestUrl = "https://api.github.com/users/kumarchetan-1"
 	const method = "GET"
 	const xhr = new XMLHttpRequest()
-
 	xhr.open(method, requestUrl)
-
-	let userImgURL, githubFollowers
 	xhr.onreadystatechange = function(){
 		console.log(xhr.readyState)
-		if(xhr.readyState == 4){
-			const data = JSON.parse(this.responseText)
-			githubFollowers = data.followers
-			userImgURL = data.avatar_url
-			console.log(githubFollowers)
-			if(userImgURL){
-				let userImg = document.createElement("img")
-				userImg.setAttribute("src", userImgURL)
-				document.querySelector(".user-img").append(userImg) 
-			} if(githubFollowers === 0 || githubFollowers ){
-				let followers = `<h3> Followers: ${githubFollowers} </h3>`
-				let followerConta = document.querySelector(".followers")
-				followerConta.innerHTML = followers;
-			}
+		if(xhr.readyState === 4){
+			// console.log(this.fetchedData)
+			let userData = JSON.parse(this.response)
+			console.log(userData.followers)
 		}
 	}
 	xhr.send()
