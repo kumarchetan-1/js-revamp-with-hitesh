@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>DOM SetTimeOut</title>
+</head>
+<body>
+	<h1>Welcome to Gatisakti</h1>
+    <button id="stop">Stop</button>
+    <button id="start">Start</button>
+
+	<script>
+		let textToChange = document.querySelector("h1")
+		let startBtn = document.querySelector("#start")
+		let stopBtn = document.querySelector("#stop")
+
+		let textChanger = function(str){
+			textToChange.innerHTML = `Welcome to JS Bootcamp ${Date.now().toString()} ${str}`
+		}
+
+		let timeToChange = setInterval(textChanger, 2000, "Guys")
+		stopBtn.addEventListener("click", ()=>{
+			clearInterval(timeToChange)
+		})
+
+		startBtn.addEventListener("click", ()=>{
+			setInterval(textChanger, 2000, "Guys")
+		})
+	</script>
+</body>
+</html>
